@@ -6,34 +6,34 @@ spring:
 server:
   port: 8005
 mybatis-plus:
-  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: com.hzit.api.bean                 # ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
+  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.jcl.bean                 # æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
   mapper-locations:
-   - classpath:mybatis/mapper/*.xml                 # mapperÓ³ÉäÎÄ¼ş ĞèÒª´´½¨ÎÄ¼ş
+   - classpath:mybatis/mapper/*.xml                 # mapperæ˜ å°„æ–‡ä»¶ éœ€è¦åˆ›å»ºæ–‡ä»¶
 
 spring:
    profiles: dev
    application:
-    name: springcloud-dept						#Î¢·şÎñ×îÖØÒªµÄÊÇÈ¡Ãû×Ö£¡Î¢·şÎñ¶ÔÍâ±©Â¶µÄÃû×Ö
+    name: springcloud-dept						#å¾®æœåŠ¡æœ€é‡è¦çš„æ˜¯å–åå­—ï¼å¾®æœåŠ¡å¯¹å¤–æš´éœ²çš„åå­—
    datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://localhost:3306/bj1903?useUnicode = true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true              # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://localhost:3306/bj1903?useUnicode = true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true              # æ•°æ®åº“åç§°
     username: root
     password: 123456
     dbcp2:
-      min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                 # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                 # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 eureka:
   client:
     service-url:
       #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
       defaultZone: http://eureka7001.com:7004/eureka
   instance:
-      instance-id: springcloud-dept:8005		#ĞŞ¸Ä±ğÃû
-      prefer-ip-address: true		#ÏÔÊ¾IPµØÖ·
+      instance-id: springcloud-dept:8005		#ä¿®æ”¹åˆ«å
+      prefer-ip-address: true		#æ˜¾ç¤ºIPåœ°å€
 
 info:
  app.name:  springcloud-dept
@@ -44,34 +44,34 @@ info:
 server:
   port: 8006
 mybatis-plus:
-  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: com.hzit.api.bean                 # ËùÓĞEntity±ğÃûÀàËùÔÚ°ü
+  #config-location: classpath:mybatis/mybatis.cfg.xml       # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.jcl.bean                 # æ‰€æœ‰Entityåˆ«åç±»æ‰€åœ¨åŒ…
   mapper-locations:
-   - classpath:mybatis/mapper/*.xml                 # mapperÓ³ÉäÎÄ¼ş ĞèÒª´´½¨ÎÄ¼ş
+   - classpath:mybatis/mapper/*.xml                 # mapperæ˜ å°„æ–‡ä»¶ éœ€è¦åˆ›å»ºæ–‡ä»¶
 
 spring:
    profiles: test
    application:
-    name: springcloud-dept						#Î¢·şÎñ×îÖØÒªµÄÊÇÈ¡Ãû×Ö£¡Î¢·şÎñ¶ÔÍâ±©Â¶µÄÃû×Ö
+    name: springcloud-dept						#å¾®æœåŠ¡æœ€é‡è¦çš„æ˜¯å–åå­—ï¼å¾®æœåŠ¡å¯¹å¤–æš´éœ²çš„åå­—
    datasource:
-    type: com.alibaba.druid.pool.DruidDataSource            # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlÇı¶¯°ü
-    url: jdbc:mysql://localhost:3306/bj1903?useUnicode = true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true              # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource            # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://localhost:3306/bj1903?useUnicode = true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=UTC&useSSL=true              # æ•°æ®åº“åç§°
     username: root
     password: 123456
     dbcp2:
-      min-idle: 5                                           # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                       # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                          # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                 # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                           # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                       # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                          # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                 # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 eureka:
   client:
     service-url:
       #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
       defaultZone: http://eureka7001.com:7005/eureka
   instance:
-      instance-id: springcloud-dept:8006		#ĞŞ¸Ä±ğÃû
-      prefer-ip-address: true		#ÏÔÊ¾IPµØÖ·
+      instance-id: springcloud-dept:8006		#ä¿®æ”¹åˆ«å
+      prefer-ip-address: true		#æ˜¾ç¤ºIPåœ°å€
 
 info:
  app.name:  springcloud-dept
