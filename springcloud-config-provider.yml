@@ -4,7 +4,7 @@ spring:
            - dev
 ---
 server:
-  port: 8001
+  port: 8005
 mybatis:
   type-aliases-package: com.hzit.bean
   mapper-locations:
@@ -32,7 +32,7 @@ eureka:
       defaultZone: http://localhost:7001/eureka # eureka服务器的地址   单机版
       #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka #集群版
   instance: 
-    instance-id: springcloud-dept:8001  #设置访问的别名
+    instance-id: springcloud-dept:8005  #设置访问的别名
     prefer-ip-address: true        #显示ip地址
 info:                              #点击别名  访问info信息
   app.name: springcloud-dept
@@ -41,7 +41,7 @@ info:                              #点击别名  访问info信息
   build.version: $project.version$
 ---
 server:
-  port: 8001
+  port: 8006
 mybatis:
   type-aliases-package: com.hzit.bean
   mapper-locations:
@@ -55,7 +55,7 @@ spring:
     driver-class-name: org.gjt.mm.mysql.Driver
     url: jdbc:mysql://localhost:3306/bj1805_2
     username: root
-    password: root
+    password: 123456
     dbcp2:
       min-idle: 5
       initial-size: 5
@@ -69,7 +69,7 @@ eureka:
       defaultZone: http://localhost:7001/eureka # eureka服务器的地址   单机版
       #defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka #集群版
   instance: 
-    instance-id: springcloud-dept:8001  #设置访问的别名
+    instance-id: springcloud-dept:8006  #设置访问的别名
     prefer-ip-address: true        #显示ip地址
 info:                              #点击别名  访问info信息
   app.name: springcloud-dept
